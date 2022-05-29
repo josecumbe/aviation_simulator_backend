@@ -9,7 +9,7 @@ const path = require("path");
 
 
 const app = express();
-mongoose.connect(process.env.MONGO_URL,{
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@ggvapi.xynk9gm.mongodb.net/ggvDB?retryWrites=true&w=majority`,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
